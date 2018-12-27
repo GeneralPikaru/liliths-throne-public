@@ -4478,6 +4478,9 @@ public abstract class GameCharacter implements XMLSaving {
 			experience -= getExperienceNeededForNextLevel();
 			level++;
 			perkPoints++;
+			if (level % 5 == 0) {
+				perkPoints += 4;
+			}
 		}
 
 		if (getLevel() == LEVEL_CAP) {
